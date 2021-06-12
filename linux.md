@@ -13,6 +13,8 @@ $ dd if=/dev/zero of=out.txt bs=1M count=10
 
 ### `yes(1)` - Output a string repeatedly
 
+Useful to pipe commands that ask for confirmation to
+
 ```
 $ yes
 $ yes whatevah
