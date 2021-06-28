@@ -29,3 +29,15 @@ $ echo hihi
 # other commands bla bla....
 # [Ctrl-D] so that the session is written to foo.txt
 ```
+
+### Change default web browser
+
+From 
+https://wiki.debian.org/DefaultWebBrowser#Default_for_foreign_programs_.28system-wide.29
+
+```
+$ update-alternatives --config x-www-browser
+
+$ xdg-settings set default-web-browser firefox-esr.desktop
+$ xdg-settings get default-web-browser
+```
