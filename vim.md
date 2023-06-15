@@ -34,6 +34,9 @@ ctrl-y and ctrl-e - move up/down 1 line without moving cursor
 ; - move to the next character (after using f/t)
 , - move to the previous character (after using f/t)
 
+ctrl-O - jump to previous position in the jumplist
+ctrl-I - jump to next position in the jumplist
+
 
 EDITING
 --------
