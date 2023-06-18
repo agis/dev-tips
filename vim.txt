@@ -1,21 +1,18 @@
-### Format the selected block according to column rules (word-wrap)
-
-```
+Format the selected block according to column rules (word-wrap)
+---------------------------------------------------------------
 select block + gq
-```
 
-### Zoom a particular window and restore it:
-
+Expand a particular window to full width and restore it:
+--------------------------------------------------------
 Zoom in: `c-w-|`
 Zoom out: `c-w-=`
 
-### Opening fzf result in split windows
-
+FZF
+--------------------------------------------------------------
 - Hitting Ctrl-x will open the file under the cursor as a horizontal split.
 - Hitting Ctrl-v will alternatively open that file as a vertical split.
 - Hitting Ctrl-t will alternatively open that file in a new tab.
 
-------------------
 
 MOVING
 --------
@@ -24,8 +21,10 @@ MOVING
 [[ and ]] - jump to beginning of enclosing function
 {{ and }} - jump to next paragraph
 
-'. - jump to last edit
-`` - jump back to where you jumped from
+ctrl-o - jump to previous position in the jumplist
+ctrl-i - jump to next position in the jumplisti
+g; - jump to previous edit
+g, - jump to next edit
 
 ctrl-u and ctrl-d - scroll page up/down
 ctrl-y and ctrl-e - move up/down 1 line without moving cursor
@@ -34,13 +33,21 @@ ctrl-y and ctrl-e - move up/down 1 line without moving cursor
 ; - move to the next character (after using f/t)
 , - move to the previous character (after using f/t)
 
-ctrl-O - jump to previous position in the jumplist
-ctrl-I - jump to next position in the jumplist
+% - jump between matching () or {} or []
+
+MARKS
+-------
+A capital mark {A-Z} will work between files.
+'a - jump to the beginning of line of mark a
+`a - jump to the exact position of mark a
+'. - jump to the beginning of line of last edit (special marker)
+`. - jump to the last edit in the current buffer (special marker)
+`` - jump back to where you jumped from
 
 
 EDITING
 --------
-gj – merge the line below to the current one with no space in between them
+gJ – merge the line below to the current one with no space in between them
 ciw - change word under cursor
 cip - change paragraph under cursor
 
@@ -61,3 +68,8 @@ AUTOCOMPLETION
 --------------
 In Insert mode, <C-x><C-f> to autocomplete files. <C-x><C-k> to autocomplete
 based on a dictionary.
+
+
+MORE
+-----------
+http://vimsheet.com/
