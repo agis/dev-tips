@@ -17,12 +17,15 @@ FZF
 MOVING
 --------
 ^ – jump to the first (non-blank) character of the line
+$ - jump to end of line
 
 [[ and ]] - jump to beginning of enclosing function
 {{ and }} - jump to next paragraph
 
 ctrl-o - jump to previous position in the jumplist
-ctrl-i - jump to next position in the jumplisti
+ctrl-i - jump to next position in the jumplist
+ctrl-t - jump to the oldest entry in the tagstack
+
 g; - jump to previous edit
 g, - jump to next edit
 
@@ -30,12 +33,13 @@ ctrl-u and ctrl-d - scroll page up/down
 ctrl-y and ctrl-e - move up/down 1 line without moving cursor
 
 2f, - jump to the second next comma character
-; - move to the next character (after using f/t)
 , - move to the previous character (after using f/t)
+; - move to the next character (after using f/t)
 
 % - jump between matching () or {} or []
 
-MARKS
+
+MARKERS
 -------
 A capital mark {A-Z} will work between files.
 'a - jump to the beginning of line of mark a
@@ -44,13 +48,20 @@ A capital mark {A-Z} will work between files.
 `. - jump to the last edit in the current buffer (special marker)
 `` - jump back to where you jumped from
 
+VISUAL MODE
+-----------
+(normal mode) gv - reselect last visual selection
+
 
 EDITING
 --------
 gJ – merge the line below to the current one with no space in between them
 ciw - change word under cursor
 cip - change paragraph under cursor
-
+dap - delete around paragraph
+daf - delete around function (for vim-go)
+U (in visual mode) - change selection to uppercase
+u (in visual mode) - change selection to lowercase
 
 SEARCHING
 ----------
@@ -59,6 +70,7 @@ SEARCHING
 F - like f, but backwards (find next character)
 T - like t, but backwards (find next character)
 
+
 COMMANDS
 --------
 :sav – save the file under a new name and continue editing the new copy
@@ -66,8 +78,17 @@ COMMANDS
 
 AUTOCOMPLETION
 --------------
-In Insert mode, <C-x><C-f> to autocomplete files. <C-x><C-k> to autocomplete
-based on a dictionary.
+In Insert mode:
+- <C-x><C-f> to autocomplete files
+- <C-x><C-k> to autocomplete based on a dictionary
+
+
+vim-go
+--------------
+:GoSameIds - highlight all instances of the identifier under the cursor
+:GoExtract - extract the selected code into a function
+:GoImpl - generate method stubs for an interface
+:GoIfErr - generate an if err != nil check
 
 
 MORE
